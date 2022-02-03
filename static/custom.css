@@ -14,9 +14,144 @@ body {
   margin: 40px;
 }
 
-.header {
+.title {
+  margin: 20px;
+  font-weight: 600;
+  font-size: 35px;
+  color: #a3a3a3;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  display: inline-block;
+  margin: 20px;
+  text-align: center;
+  transition: 0.8s;
+  box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15),
+    -7px -7px 20px rgba(255, 255, 255, 1),
+    inset 0px 0px 4px rgba(255, 255, 255, 0.2),
+    inset 7px 7px 15px rgba(55, 84, 170, 0),
+    inset -7px -7px 20px rgba(255, 255, 255, 0),
+    0px 0px 4px rgba(255, 255, 255, 0);
+  transition: 0.8s;
+  min-width: 200px;
+  min-height: 200px;
+}
+
+.header .card .stats {
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.number {
+  font-size: 35px;
+  font-weight: 600;
+}
+.factor {
+  color: #a3a3a3;
+}
+
+.flags {
+  max-width: 930px;
+  background: #fff;
+  display: block;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15),
+    -7px -7px 20px rgba(255, 255, 255, 1),
+    inset 0px 0px 4px rgba(255, 255, 255, 0.2),
+    inset 7px 7px 15px rgba(55, 84, 170, 0),
+    inset -7px -7px 20px rgba(255, 255, 255, 0),
+    0px 0px 4px rgba(255, 255, 255, 0);
+  padding-bottom: 20px;
+}
+
+.flags img {
+  margin: 20px;
+}
+
+.flag {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.flag div {
+  display: block;
+  font-size: 10px;
+  width: 92px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.active {
+  box-shadow: 2px 3px 5px 0px black;
+}
+
+@media screen and (max-width: 1020px) {
+  .card {
+    width: 100%;
+    height: 200px;
+    background: #fff;
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    transition: 0.8s;
+    box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15),
+      -7px -7px 20px rgba(255, 255, 255, 1),
+      inset 0px 0px 4px rgba(255, 255, 255, 0.2),
+      inset 7px 7px 15px rgba(55, 84, 170, 0),
+      inset -7px -7px 20px rgba(255, 255, 255, 0),
+      0px 0px 4px rgba(255, 255, 255, 0);
+    transition: 0.8s;
+  }
+}
+
+.footer {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.footer-love-icon {
+  height: 10px;
+  padding-left: 1px;
+  padding-right: 1px;
+  animation: beat 0.55s infinite alternate;
+}
+@keyframes beat {
+  to {
+    transform: scale(1.4);
+  }
+}
+
+#today_new_cases {
+  border-bottom: 5px solid #d3d02a;
+}
+
+#today_new_deaths {
+  border-bottom: 5px solid #ff0000;
+}
+
+#total_active_cases {
+  border-bottom: 5px solid #d3d02a;
+}
+
+#total_individuals_in_hospitals {
+  border-bottom: 5px solid #d3d02a;
+}
+#total_cases {
+  border-bottom: 5px solid #d3d02a;
+}
+#total_deaths {
+  border-bottom: 5px solid #ff0000;
+}
+#total_recovered {
+  border-bottom: 5px solid #00ff4c;
+}
+#total_pcr_testing_count {
+  border-bottom: 5px solid #f5a40d;
 }

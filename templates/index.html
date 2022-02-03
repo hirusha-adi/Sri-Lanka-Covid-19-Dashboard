@@ -15,15 +15,86 @@
 </head>
 <body>
     
-    <div class="header">
-        <div id="total" class="card">
-            <div class="number">
-                12345
-            </div>
-            <div class="factor">
-                Total
-            </div>
+<div class="header">
+
+    <div id="title" class="title">COVID-19 STATISTICS OF SRI LANKA</div>
+
+    <div id="today_new_cases" class="card">
+        <div class="stats">
+            <div class="number">{{ today_new_cases }}</div>
+            <div class="factor">New Cases Today</div>
         </div>
+    </div>
+
+    <div id="today_new_deaths" class="card">
+        <div class="stats">
+            <div class="number">{{ today_new_deaths }}</div>
+            <div class="factor">New Deaths Today</div>
+        </div>
+    </div>
+
+    <div id="total_active_cases" class="card">
+        <div class="stats">
+            <div class="number">{{ total_active_cases }}</div>
+            <div class="factor">Total Active Cases</div>
+        </div>
+    </div>
+
+    <div id="total_cases" class="card">
+        <div class="stats">
+            <div class="number">{{ total_cases }}</div>
+            <div class="factor">Total Cases</div>
+        </div>
+    </div>
+
+    <div id="total_individuals_in_hospitals" class="card">
+        <div class="stats">
+            <div class="number">{{ total_individuals_in_hospitals }}</div>
+            <div class="factor">Total in Hospitals</div>
+        </div>
+    </div>
+
+    <div id="total_deaths" class="card">
+        <div class="stats">
+            <div class="number">{{ total_deaths }}</div>
+            <div class="factor">Total Deaths</div>
+        </div>
+    </div>
+
+    <div id="total_recovered" class="card">
+        <div class="stats">
+            <div class="number">{{ total_recovered }}</div>
+            <div class="factor">Total Recovered</div>
+        </div>
+    </div>
+
+    <div id="total_pcr_testing_count" class="card">
+        <div class="stats">
+            <div class="number">{{ total_pcr_testing_count }}</div>
+            <div class="factor">Total PCR Testing Count</div>
+        </div>
+    </div>
+
+    <br>
+
+        <div class="footer">
+            <br>
+            <b>Last updated at {{ last_updated_time }}</b>
+            <br>
+            <br>
+            <b><a href="{{ url_for('more') }}">Click Here to see more information</a></b>
+            <br>
+            <br>
+            <br>
+            Made by <a href="http://hirusha.xyz" target="_blank" rel="noopener noreferrer">@hirusha-adi</a>
+            <br>
+            <br>
+            <b>NOTE</b>: This is <b>not</b> an <b>Official</b> site.
+            <br>
+            <br>
+            Data is collected from the <a href="https://www.hpb.health.gov.lk/en/api-documentation" target="_blank" rel="noopener noreferrer">Health Promotion Buraeu's</a> API 
+        </div>
+
     </div>
 
 </body>
