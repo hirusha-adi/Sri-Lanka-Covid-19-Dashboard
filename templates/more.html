@@ -180,7 +180,7 @@
                             </table>
                         </div>
                         <div class="card-footer border-0 py-5">
-                            <span class="text-muted text-sm">Showing 15 items out of {{ daily_pcr_testing_data_len }} results found. <a href="{{ url_for('morepcr') }}">Click Here to see all</a></span>
+                            <span class="text-muted text-sm">Showing {{ len_daily_pcr_testing_data }} items out of {{ daily_pcr_testing_data_len }} results found. <a href="{{ url_for('morepcr') }}">Click Here to see all</a></span>
                         </div>
                     </div>
 
@@ -218,7 +218,7 @@
                             </table>
                         </div>
                         <div class="card-footer border-0 py-5">
-                            <span class="text-muted text-sm">Showing 15 items out of {{ daily_antigen_testing_data_len }} results found. <a href="{{ url_for('moreantigen') }}">Click Here to see all</a></span>
+                            <span class="text-muted text-sm">Showing {{ len_daily_antigen_testing_data }} items out of {{ daily_antigen_testing_data_len }} results found. <a href="{{ url_for('moreantigen') }}">Click Here to see all</a></span>
                             <br>
                             <br>
                             <br>
