@@ -241,4 +241,4 @@ def moreall():
 
 
 if __name__ == "__main__":
-    app.run("0.0.0.0", port=3336, debug=True)
+    app.run("0.0.0.0", port=3336, debug=False)
