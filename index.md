@@ -1,37 +1,96 @@
-## Welcome to GitHub Pages
+## Sri Lanka Covid-19 Dashboard
 
-You can use the [editor on GitHub](https://github.com/hirusha-adi/Sri-Lanka-Covid-19-Dashboard/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Just another covid-19 dashboard that displays covid-19 information of sri lanka.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Images
 
-### Markdown
+![image](https://user-images.githubusercontent.com/36286877/152511550-18ce631a-ed09-4319-bdb2-882b5adc4728.png)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+![image](https://user-images.githubusercontent.com/36286877/152511564-47346d36-815b-434d-a7bd-911eeedac741.png)
 
-```markdown
-Syntax highlighted code block
+## Available Routes
 
-# Header 1
-## Header 2
-### Header 3
+<table>
+<thead>
+  <tr>
+    <th>Route</th>
+    <th>Information</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>/</td>
+    <td>Home Page. Everything important is displayed simply</td>
+  </tr>
+  <tr>
+    <td>/more</td>
+    <td>Additional Information (Daily PCR and Antigen Testing Data)</td>
+  </tr>
+  <tr>
+    <td>/more/pcr</td>
+    <td>Additional Information (Display all PCR Testing Data available)</td>
+  </tr>
+  <tr>
+    <td>/more/antigen</td>
+    <td>Additional Information (Display all Antigen Testing Data available)</td>
+  </tr>
+</tbody>
+</table>
 
-- Bulleted
-- List
+## Installing the Web Server
 
-1. Numbered
-2. List
+### Arch Linux
 
-**Bold** and _Italic_ and `Code` text
+run the commands below, line by line
 
-[Link](url) and ![Image](src)
+```bash
+sudo pacman -Syyuu --noconfirm
+sudo pacman -S git python python-pip --noconfirm
+cd ~
+git clone https://github.com/hirusha-adi/Sri-Lanka-Covid-19-Dashboard.git
+cd Sri-Lanka-Covid-19-Dashboard
+pip3 install -r requirements.txt
+python3 covid.py # to start the web app
+# CTRL + Z
+# bg
+# disown -h
+```
+### Ubuntu/Debian
+
+run the commands below, line by line
+
+```bash
+sudo apt install && sudo apt upgrade -y
+sudo apt install git python3 python3-pip -y
+cd ~
+git clone https://github.com/hirusha-adi/Sri-Lanka-Covid-19-Dashboard.git
+cd Sri-Lanka-Covid-19-Dashboard
+pip3 install -r requirements.txt
+python3 covid.py # to start the web app
+# CTRL + Z
+# bg
+# disown -h
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+### Windows
 
-### Jekyll Themes
+1. Download and install Python3. Make sure to 'Add to PATH' when install python3
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/hirusha-adi/Sri-Lanka-Covid-19-Dashboard/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+![image1](https://www.tutorials24x7.com/uploads/2019-12-26/files/3-tutorials24x7-python-windows-install.png)
 
-### Support or Contact
+2. Download the code as a .zip file from this Github Reposotory
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+![image2](https://cdn.discordapp.com/attachments/935515175073763398/937186561299197952/unknown.png)
+
+(this above image might not be the same)
+
+3. Extract the downloaded `.zip` file
+4. open `cmd` in that folder
+5. run `pip install -r requirements.txt`
+6. run `python covid.py` to start the web app
+
+
+
+
+
+
