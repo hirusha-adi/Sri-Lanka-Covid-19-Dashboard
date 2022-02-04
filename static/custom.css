@@ -155,3 +155,7 @@ body {
 #total_pcr_testing_count {
   border-bottom: 5px solid #f5a40d;
 }
+
+#total_antigen_testing_count {
+  border-bottom: 5px solid #f5a40d;
+}

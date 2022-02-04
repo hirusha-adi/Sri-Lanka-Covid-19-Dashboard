@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Info</title>
+
+    <style>
+        @import url(https://unpkg.com/@webpixels/css@1.1.5/dist/index.css);
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.0/font/bootstrap-icons.min.css");
+    </style>
+</head>
+<body>
+        
+    <!-- Dashboard -->
+    <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
+
+        <!-- Main content -->
+        <div class="h-screen flex-grow-1 overflow-y-lg-auto">
+            
+            <!-- Header -->
+            <header class="bg-surface-primary border-bottom pt-6">
+                <div class="container-fluid">
+                    <div class="mb-npx">
+                        <div class="row align-items-center">
+                            
+                            <div class="col-sm-6 col-12 mb-4 mb-sm-0">
+                                <!-- Title -->
+                                <h1 class="h2 mb-0 ls-tight">COVID-19 STATISTICS OF SRI LANKA</h1>
+                            </div>
+                            
+                            <!-- Actions -->
+                            <div class="col-sm-6 col-12 text-sm-end">
+                                <div class="mx-n1">
+                                    
+                                    <a href="{{ url_for('index') }}" class="btn d-inline-flex btn-sm btn-primary mx-1">
+                                        <span class=" pe-2">
+                                            <i></i>
+                                        </span>
+                                        <span>Back to Simple Mode</span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                </header>
+
+            <!-- Main -->
+            <main class="py-6 bg-surface-secondary">
+                <div class="container-fluid">
+                    
+                    <!-- Card stats -->
+                    <div class="row g-6 mb-6">
+                        <div class="col-xl-3 col-sm-6 col-12">
+                            <div class="card shadow border-0">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <span class="h6 font-semibold text-muted text-sm d-block mb-2">New Cases</span>
+                                            <span class="h3 font-bold mb-0">{{ today_new_cases }}</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="icon icon-shape bg-tertiary text-white text-lg rounded-circle">
+                                                <i class="bi bi-credit-card"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2 mb-0 text-sm">
+                                        <span class="badge badge-pill bg-soft-success text-success me-2">
+                                            <i class="bi"></i>Today
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 col-12">
+                            <div class="card shadow border-0">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <span class="h6 font-semibold text-muted text-sm d-block mb-2">New Deaths
+                                            </span>
+                                            <span class="h3 font-bold mb-0">{{ today_new_deaths }}</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="icon icon-shape bg-primary text-white text-lg rounded-circle">
+                                                <i class="bi bi-people"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2 mb-0 text-sm">
+                                        <span class="badge badge-pill bg-soft-success text-success me-2">
+                                            <i class="bi"></i>Today
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 col-12">
+                            <div class="card shadow border-0">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <span class="h6 font-semibold text-muted text-sm d-block mb-2">Total
+                                                Cases</span>
+                                            <span class="h3 font-bold mb-0">{{ total_cases }}</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="icon icon-shape bg-info text-white text-lg rounded-circle">
+                                                <i class="bi bi-clock-history"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2 mb-0 text-sm">
+                                        <span class="badge badge-pill bg-soft-success text-success me-2">
+                                            <i class="bi"></i>All Time
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 col-12">
+                            <div class="card shadow border-0">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <span class="h6 font-semibold text-muted text-sm d-block mb-2">Total Deaths</span>
+                                            <span class="h3 font-bold mb-0">{{ total_deaths }}</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="icon icon-shape bg-warning text-white text-lg rounded-circle">
+                                                <i class="bi bi-minecart-loaded"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2 mb-0 text-sm">
+                                        <span class="badge badge-pill bg-soft-success text-success me-2">
+                                            <i class="bi"></i>All Time
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow border-0 mb-7">
+                        <div class="card-header">
+                            <h5 class="mb-0">Daily PCR Testing Data</h5>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover table-nowrap">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Daily PCR Testing Count</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for one_day in daily_pcr_testing_data %}
+                                        <tr>
+                                            <td>
+                                                <img alt="..."
+                                                    src="{{ url_for('static', filename='calender.png') }}"
+                                                    class="avatar avatar-sm rounded-circle me-2">
+                                                <a class="text-heading font-semibold" href="#">
+                                                    {{ one_day["date"] }}
+                                                </a>
+                                            </td>
+                                            <td>
+                                                {{ one_day["pcr_count"] }}
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="card-footer border-0 py-5">
+                            <span class="text-muted text-sm">Showing 15 items out of {{ daily_pcr_testing_data_len }} results found. <a href="{{ url_for('morepcr') }}">Click Here to see all</a></span>
+                        </div>
+                    </div>
+
+                    <div class="card shadow border-0 mb-7">
+                        <div class="card-header">
+                            <h5 class="mb-0">Daily Antigen Testing Data</h5>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover table-nowrap">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Daily Antigen Testing Count</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for one_day in daily_antigen_testing_data %}
+                                        <tr>
+                                            <td>
+                                                <img alt="..."
+                                                    src="{{ url_for('static', filename='calender.png') }}"
+                                                    class="avatar avatar-sm rounded-circle me-2">
+                                                <a class="text-heading font-semibold" href="#">
+                                                    {{ one_day["date"] }}
+                                                </a>
+                                            </td>
+                        
+                                            <td>
+                                                {{ one_day["antigen_count"] }}
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                    
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="card-footer border-0 py-5">
+                            <span class="text-muted text-sm">Showing 15 items out of {{ daily_antigen_testing_data_len }} results found. <a href="{{ url_for('moreantigen') }}">Click Here to see all</a></span>
+                            <br>
+                            <br>
+                            <br>
+                            <span class="text-muted text-sm"><a href="{{ url_for('moreall') }}">Click Here to see all details</a></span>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+</body>
+</html>
