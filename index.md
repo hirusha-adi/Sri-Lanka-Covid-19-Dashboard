@@ -2,6 +2,9 @@
 
 Just another covid-19 dashboard that displays covid-19 information of sri lanka.
 
+- Test the deployement [Click Here](http://covid.hirusha.xyz)
+- Additional Information: [Click Here](https://hirusha-adi.github.io/Sri-Lanka-Covid-19-Dashboard/) 
+
 ## Images
 
 ![image](https://user-images.githubusercontent.com/36286877/152511550-18ce631a-ed09-4319-bdb2-882b5adc4728.png)
