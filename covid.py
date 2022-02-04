@@ -194,6 +194,7 @@ def moreantigen():
                            )
 
 
+@app.route("/admin")
 @app.route("/more/all")
 def moreall():
     rdata = getDataFromAPI()
